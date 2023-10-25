@@ -1,7 +1,13 @@
 import chalk from "chalk";
-import { students } from "./students.js";
 
-console.log(chalk.blue(students.melissa.name));
-console.log(chalk.yellow(students.teddy.name));
-console.log(chalk.green(students.theo.name));
-console.log(chalk.red(students.thilbault.name));
+const colleagues = ["Teddy", "Mélissa", "Thibault", "Thomas"];
+
+colleagues.forEach((colleague) => {
+	const randomColor = chalk.rgb(
+		Math.floor(Math.random() * 256),
+		Math.floor(Math.random() * 256),
+		Math.floor(Math.random() * 256)
+	);
+
+	console.log(randomColor(colleague));
+});
